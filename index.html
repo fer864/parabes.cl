@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Tienda Perfumes</title>
+    <!-- Bootstrap CSS + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navbar con logo -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/2935/2935424.png" alt="Perfume Logo" height="40" class="me-2">
+                <span class="fw-bold">Perfume Store</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4"></ul>
+                <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    <i class="bi-cart-fill me-1"></i>
+                    Carrito
+                    <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5 text-center text-white">
+            <h1 class="display-4 fw-bolder">Perfumes Arabes</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Aromas que definen tu estilo</p>
+        </div>
+    </header>
+
+    <!-- Productos -->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center">
+
+                <!-- Producto 1 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://m.media-amazon.com/images/I/41ZQdV659VL.jpg" alt="9pm" />
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bolder">Afnan 9pm</h5>
+                            clp35.000
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
+                            <a href="#" class="btn btn-outline-dark mt-auto add-to-cart" data-name="Afnan 9pm" data-price="35.000">Añadir al carrito</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://www.lodoro.cl/cdn/shop/files/Asad_Zanzibar_Lattafa_Eau_de_Par_2_1024x.png?v=1749920873S" alt="Lattafa" />
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bolder">Lattafa Asad Zanzibar</h5>
+                            CLP20.000
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
+                            <a href="#" class="btn btn-outline-dark mt-auto add-to-cart" data-name="Khamrah Lattafa" data-price="20.000">Añadir al carrito</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://www.eliteperfumes.cl/cdn/shop/files/lattafa-33238309339172.jpg?v=1740688667&width=1214" alt="Lattafa" />
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bolder">Asad Lattafa</h5>
+                            CLP20.000
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
+                            <a href="#" class="btn btn-outline-dark mt-auto add-to-cart" data-name="Asad Lattafa" data-price="20.000">Añadir al carrito</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://www.eliteperfumes.cl/cdn/shop/files/afnan-33377826504740.jpg?v=1726526955&width=1214" alt="dive" />
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bolder">Afnan 9am Dive</h5>
+                            CLP30.000
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
+                            <a href="#" class="btn btn-outline-dark mt-auto add-to-cart" data-name="Afnan 9am Dive" data-price="30.000">Añadir al carrito</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal del carrito -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tu Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="cart-items">
+                    <p>Tu carrito está vacío.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button class="btn btn-primary">Proceder al pago</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+        <!-- Sección Institucional -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Quiénes Somos</h2>
+                <p class="text-center text-muted lead">
+                    En <strong>Perfumes Árabes</strong> nos dedicamos a ofrecer una experiencia sensorial única a través de fragancias auténticas inspiradas en la tradición del Medio Oriente. Nuestro compromiso es acercar el arte de la perfumería árabe a quienes buscan calidad, distinción y elegancia en cada esencia.
+                </p>
+            </div>
+        </section>
+    
+        <section class="py-5">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-6 mb-4">
+                        <h3 class="fw-bold">Nuestra Misión</h3>
+                        <p class="text-muted">
+                            Brindar perfumes árabes de alta calidad que reflejen la riqueza cultural, la sofisticación y la intensidad de las esencias orientales, satisfaciendo las expectativas de nuestros clientes mediante una atención personalizada y productos seleccionados cuidadosamente.
+                        </p>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <h3 class="fw-bold">Nuestra Visión</h3>
+                        <p class="text-muted">
+                            Ser reconocidos como la tienda de referencia en perfumes árabes en el mundo hispano, destacando por la autenticidad de nuestras fragancias, el servicio excepcional y el compromiso con la excelencia en cada detalle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">© Perfumes Árabes 2025 dieñado por Fernando Torres</p></div>
+        </footer>
+
+    <!-- Bootstrap JS + Función del carrito -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let cart = [];
+        const cartCount = document.getElementById('cart-count');
+        const cartItemsContainer = document.getElementById('cart-items');
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                const name = this.getAttribute('data-name');
+                const price = parseFloat(this.getAttribute('data-price'));
+                cart.push({ name, price });
+                updateCart();
+            });
+        });
+
+        function updateCart() {
+            cartCount.textContent = cart.length;
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p>Tu carrito está vacío.</p>';
+                return;
+            }
+
+            let html = '';
+            let total = 0;
+            cart.forEach(item => {
+                html += `<p>${item.name} - $${item.price.toFixed(2)}</p>`;
+                total += item.price;
+            });
+            html += `<hr><strong>Total: $${total.toFixed(2)}</strong>`;
+            cartItemsContainer.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
